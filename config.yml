@@ -1,0 +1,3 @@
+ServerConfig:
+  Port: 80
+  UrlPath : "/.well-known/pki-validation/:filename"
