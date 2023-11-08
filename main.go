@@ -16,6 +16,18 @@ func main() {
 	r := gin.Default()
 
 	// 定义路由处理程序
+	r.GET("/", func(c *gin.Context) {
+		c.String(http.StatusOK, "project: https://github.com/BacklitCat/zerossl_verify")
+	})
+
+	r.GET("/stat", func(c *gin.Context) {
+		c.String(http.StatusOK, "ok")
+	})
+
+	r.GET("/stat/", func(c *gin.Context) {
+		c.String(http.StatusOK, "ok")
+	})
+
 	r.GET(config.Conf.Server.UrlPath, func(c *gin.Context) {
 		filename := c.Param("filename")
 
